@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 
+import { Flex } from "@chakra-ui/react";
 export class AppContainer extends Component {
   render() {
     return (
-      <div>
+      <Flex>
         <p>hello world!</p>
-      </div>
+      </Flex>
     );
   }
 }

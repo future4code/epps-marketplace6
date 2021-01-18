@@ -1,10 +1,12 @@
-import React from 'react'
-import { AppContainer } from './components/AppContainer'
-
+import React from "react";
+import { AppContainer } from "./components/AppContainer";
+import { ChakraProvider } from "@chakra-ui/react";
 function App() {
-	return (
-        <AppContainer />
-	)
+  return (
+    <ChakraProvider>
+      <AppContainer />
+    </ChakraProvider>
+  );
 }
 
-export default App
+export default App;
