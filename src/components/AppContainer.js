@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Flex, Heading, Box } from "@chakra-ui/react";
-import DetalhesPage from "../pages/DetalhesPage";
+import { Flex, Heading, Box, Text } from "@chakra-ui/react";
+import DetalhesPage from "../pages/DetailsPage";
 
 export class AppContainer extends Component {
   render() {
@@ -11,11 +11,13 @@ export class AppContainer extends Component {
         direction="column"
         align="center"
         justify="center"
-        background="#F0FAF7"
-        fontFamily="'Montserrat', sans-serif;"
+        background="#272F3F"
+        fontFamily="'Montserrat', sans-serif"
+        paddingX="2rem"
+        bgGradient="linear-gradient(-10deg, #272F3F, #235B80)"
       >
         <Heading
-          fontFamily="'Poppins', sans-serif;"
+          fontFamily="'Poppins', sans-serif"
           fontWeight="900"
           color="#EF6F6C"
           fontSize="64px"
@@ -24,15 +26,15 @@ export class AppContainer extends Component {
           FUTURECAR
         </Heading>
 
-        <Heading color="#000" fontSize="64px" as="h1">
+        <Heading color="#F0FAF7" fontSize="64px" as="h1">
           going beyond
         </Heading>
-        <p>
+        <Text color="#F0FAF7">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
           consequatur impedit praesentium quisquam maxime debitis maiores
           placeat optio porro fugit eaque sit, qui natus consectetur eveniet quo
           nam quos? Facere?
-        </p>
+        </Text>
         <DetalhesPage />
       </Flex>
     );
