@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Flex, Heading, Box, Text } from "@chakra-ui/react";
-import DetalhesPage from "../pages/DetailsPage";
+import DetailsPage from "../pages/DetailsPage";
 
 export class AppContainer extends Component {
   render() {
@@ -35,7 +35,7 @@ export class AppContainer extends Component {
           placeat optio porro fugit eaque sit, qui natus consectetur eveniet quo
           nam quos? Facere?
         </Text>
-        <DetalhesPage />
+        <DetailsPage />
       </Flex>
     );
   }

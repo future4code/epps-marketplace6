@@ -8,8 +8,8 @@ class DetailsPage extends Component {
       <Flex>
         {/* <Header></Header> */}
         <Flex marginX="2rem" direction="column">
-          <Heading>Detalhes do produto</Heading>
-          <Box>
+          <Heading color="#F4F6F4">Detalhes do produto</Heading>
+          <Box color="#F4F6F4">
             <Text>Marca/Modelo</Text>
             <Text>Descrição</Text>
             <Text>Valor</Text>
@@ -21,6 +21,7 @@ class DetailsPage extends Component {
             <img src="" alt="" />
           </Box>
         </Flex>
+
         {/* <Footer></Footer> */}
       </Flex>
     );
