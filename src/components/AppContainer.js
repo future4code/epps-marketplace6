@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Flex, Heading, Box } from "@chakra-ui/react";
-import DetalhesPage from "./pages/DetalhesPage";
+import DetalhesPage from "../pages/DetalhesPage";
 
 export class AppContainer extends Component {
   render() {
