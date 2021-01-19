@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { Flex, Heading, Box } from "@chakra-ui/react";
-import DetalhesPage from "./pages/DetalhesPage";
-import CriarOfertaPage from "./pages/CriarOfertaPage";
-import CriarOfertaForm from "./pages/CriarOfertaForm";
+import { Flex, Heading, Text } from "@chakra-ui/react";
+import DetailsPage from "../pages/DetailsPage";
+import RegisterProductPage from "../pages/RegisterProductPage";
+
 
 export class AppContainer extends Component {
   render() {
@@ -36,10 +36,10 @@ export class AppContainer extends Component {
           consequatur impedit praesentium quisquam maxime debitis maiores
           placeat optio porro fugit eaque sit, qui natus consectetur eveniet quo
           nam quos? Facere?
-        </p>
-        <DetalhesPage />
-        <CriarOfertaPage />
-        <CriarOfertaForm />
+        </Text>
+        <DetailsPage />
+        <RegisterProductPage />
+      
 
       </Flex>
     );
