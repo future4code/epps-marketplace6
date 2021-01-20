@@ -3,7 +3,6 @@ import { Flex, Heading, Text } from "@chakra-ui/react";
 import DetailsPage from "../pages/DetailsPage";
 import RegisterProductPage from "../pages/RegisterProductPage";
 
-
 export class AppContainer extends Component {
   render() {
     return (
@@ -39,8 +38,6 @@ export class AppContainer extends Component {
         </Text>
         <DetailsPage />
         <RegisterProductPage />
-      
-
       </Flex>
     );
   }
