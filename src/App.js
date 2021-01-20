@@ -20,7 +20,7 @@ const futureCarTheme = extendTheme({
         bgColor: "magentaPalette.400",
         margin: "0 1rem",
         _hover: {
-          bgColor: "magentaPalette.400",
+          bgColor: "magentaPalette.600",
         },
       },
     },
@@ -36,6 +36,7 @@ const futureCarTheme = extendTheme({
     magentaPalette: {
       400: "#EF6F6C",
       500: "#ED5C5A",
+      600: "#EB4A47",
     },
     greyPalette: {
       100: "#F0FAF7",

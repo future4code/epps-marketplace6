@@ -9,7 +9,8 @@ class DetailsPage extends Component {
   render() {
     return (
       <Flex direction="column" w="100vw">
-        <Heading p="2rem">Detalhes do produto</Heading>
+        {" "}
+        {/* página */}
         <Flex w="100%" justifyContent="space-between" alignItems="center">
           <Flex
             w="50vw"
@@ -18,6 +19,9 @@ class DetailsPage extends Component {
             direction="column"
             justifyContent="space-between"
           >
+            <Heading fontSize="36px" p="2rem">
+              Detalhes do produto
+            </Heading>
             <Box h="100%">
               <Heading paddingY="1rem" fontSize="24" as="h3">
                 Marca/Modelo:{" "}
