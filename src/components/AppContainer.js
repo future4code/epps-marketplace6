@@ -55,7 +55,12 @@ export class AppContainer extends Component {
               Produtos
             </Button>
           </Box>
-          <Button colorScheme="button" onClick={this.goToRegister}>
+          <Button
+            bgColor="transparent"
+            variant="outline"
+            _hover={{ color: "bluePalette.500", bgColor: "greyPalette.100" }}
+            onClick={this.goToRegister}
+          >
             Registrar
           </Button>
         </Header>
