@@ -35,6 +35,8 @@ export class AppContainer extends Component {
       >
         {/* <Header></Header> */}
         {/* {changePages} */}
+        <DetailsPage />
+
         {/* <Footer></Footer> */}
       </Flex>
     );
