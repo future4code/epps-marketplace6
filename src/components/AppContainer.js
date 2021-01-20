@@ -1,28 +1,40 @@
 import React, { Component } from "react";
-import { Flex } from "@chakra-ui/react";
+import { Flex, Image, Button, Box } from "@chakra-ui/react";
 import DetailsPage from "../pages/DetailsPage";
 import RegisterProductPage from "../pages/RegisterProductPage";
 import HomePage from "../pages/HomePage";
+import ProductsPage from "../pages/ProductsPage";
+import Header from "../components/header/NavBar";
 
 export class AppContainer extends Component {
   state = {
-    pages: "",
+    page: "home",
+  };
+
+  goToHome = () => {
+    this.setState({ page: "home" });
+  };
+  goToProducts = () => {
+    this.setState({ page: "products" });
+  };
+  goToRegister = () => {
+    this.setState({ page: "register" });
   };
   render() {
-    // const changePages = () => {
-    //   switch (this.state.pages) {
-    //     case "home":
-    //       return <HomePage />;
-    //     case "products":
-    //       return <ProductsPage />;
-    //     case "details":
-    //       return <DetailsPage />;
-    //     case "register":
-    //       return <RegisterProductPage />;
-    //     default:
-    //       return <HomePage />;
-    //   }
-    // };
+    const changePages = () => {
+      switch (this.state.page) {
+        case "home":
+          return <HomePage />;
+        case "products":
+          return <ProductsPage />;
+        case "details":
+          return <DetailsPage />;
+        case "register":
+          return <RegisterProductPage />;
+        default:
+          return <HomePage />;
+      }
+    };
     return (
       <Flex
         h="100vh"
@@ -33,9 +45,23 @@ export class AppContainer extends Component {
         fontFamily="'Montserrat', sans-serif"
         paddingX="2rem"
       >
-        {/* <Header></Header> */}
-        {/* {changePages} */}
-        <DetailsPage />
+        <Header>
+          <Image />
+          <Box>
+            <Button colorScheme="button" onClick={this.goToHome}>
+              Home
+            </Button>
+            <Button colorScheme="button" onClick={this.goToProducts}>
+              Produtos
+            </Button>
+          </Box>
+          <Button colorScheme="button" onClick={this.goToRegister}>
+            Registrar
+          </Button>
+        </Header>
+
+        {changePages()}
+        {/* <DetailsPage /> */}
 
         {/* <Footer></Footer> */}
       </Flex>
