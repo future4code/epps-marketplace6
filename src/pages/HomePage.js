@@ -1,4 +1,4 @@
-import { Flex, Heading, Text } from "@chakra-ui/react";
+import { Flex, Heading, Text, Button } from "@chakra-ui/react";
 import React from "react";
 
 // import CategoryCard from "./CategoryCard";
@@ -10,21 +10,28 @@ class HomePage extends React.Component {
         as="section"
         w="100vw"
         h="90vh"
-        p="2rem"
-        marginX="2rem"
+        margin="2rem"
+        padding="2rem"
         direction="column"
       >
         <Heading
+          as="h1"
           fontFamily="'Poppins', sans-serif"
           fontWeight="900"
           color="#EF6F6C"
           fontSize="64px"
-          as="h1"
+          marginTop="2rem"
+          textAlign="center"
         >
           FUTURECAR
         </Heading>
 
-        <Heading fontSize="64px" as="h1">
+        <Heading
+          paddingBottom="1rem"
+          fontSize="36px"
+          as="h3"
+          textAlign="center"
+        >
           going beyond
         </Heading>
         <Text>
