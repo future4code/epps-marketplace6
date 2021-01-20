@@ -18,6 +18,7 @@ const futureCarTheme = extendTheme({
       },
       button: {
         bgColor: "magentaPalette.400",
+        margin: "0 1rem",
         _hover: {
           bgColor: "magentaPalette.400",
         },
