@@ -5,7 +5,7 @@ import DetailsPage from "./DetailsPage";
 class ProductsPage extends Component {
   render() {
     return (
-      <Flex w="100vw" direction="column">
+      <Flex as="section" w="100vw" direction="column">
         <Heading>Produtos</Heading>
 
         <DetailsPage />

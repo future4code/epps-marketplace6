@@ -20,6 +20,7 @@ export class AppContainer extends Component {
   goToRegister = () => {
     this.setState({ page: "register" });
   };
+
   render() {
     const changePages = () => {
       switch (this.state.page) {
@@ -37,6 +38,7 @@ export class AppContainer extends Component {
     };
     return (
       <Flex
+        as="main"
         h="100vh"
         w="100vw"
         direction="column"
@@ -47,7 +49,7 @@ export class AppContainer extends Component {
       >
         <Header>
           <Image />
-          <Box>
+          <Box as="nav">
             <Button colorScheme="button" onClick={this.goToHome}>
               Home
             </Button>

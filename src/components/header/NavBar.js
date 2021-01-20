@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React from "react";
 import { Box, Flex, Image, Button } from "@chakra-ui/react";
 // import DetailsPage from "../pages/DetailsPage";
 // import RegisterProductPage from "../pages/RegisterProductPage";
@@ -95,6 +95,7 @@ const NavBar = ({ children }) => {
 
   return (
     <Flex
+      as="header"
       position="fixed"
       top="0"
       left="0"
