@@ -6,7 +6,7 @@ import React from "react";
 class HomePage extends React.Component {
   render() {
     return (
-      <Flex w="100vw" h="100vh" p="2rem" marginX="2rem" direction="column">
+      <Flex w="100vw" h="90vh" p="2rem" marginX="2rem" direction="column">
         <Heading
           fontFamily="'Poppins', sans-serif"
           fontWeight="900"

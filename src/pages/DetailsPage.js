@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Flex, Heading, Box, Button, Text } from "@chakra-ui/react";
-// import Header from "../components/header/NavBar";
+import { Flex, Heading, Box, Button, Image } from "@chakra-ui/react";
+import imgDetails from "../img/imgDetails.png";
 
 class DetailsPage extends Component {
   // TO DO: STATE
@@ -8,37 +8,41 @@ class DetailsPage extends Component {
   // TO DO: GET
   render() {
     return (
-      <Flex p="2rem" direction="column" w="100vw">
-        {/* <Header /> */}
-        <Heading>Detalhes do produto</Heading>
-        <Flex>
-          <Flex w="50vw" direction="column">
-            <Heading fontSize="24" as="h3">
-              Marca/Modelo:{" "}
-            </Heading>
-            <Heading fontSize="24" as="h3">
-              Descrição:{" "}
-            </Heading>
-            <Heading fontSize="24" as="h3">
-              Valor:{" "}
-            </Heading>
-            <Heading fontSize="24" as="h3">
-              Data de entrega:{" "}
-            </Heading>
-            <Heading fontSize="24" as="h3">
-              Métodos de pagamento
-            </Heading>
-            <Button alignSelf="flex-end" colorScheme="brand.900">
+      <Flex direction="column" w="100vw">
+        <Heading p="2rem">Detalhes do produto</Heading>
+        <Flex w="100%" justifyContent="space-between" alignItems="center">
+          <Flex
+            w="50vw"
+            h="100%"
+            paddingX="2rem"
+            direction="column"
+            justifyContent="space-between"
+          >
+            <Box h="100%">
+              <Heading paddingY="1rem" fontSize="24" as="h3">
+                Marca/Modelo:{" "}
+              </Heading>
+              <Heading paddingY="1rem" fontSize="24" as="h3">
+                Descrição:{" "}
+              </Heading>
+              <Heading paddingY="1rem" fontSize="24" as="h3">
+                Valor:{" "}
+              </Heading>
+              <Heading paddingY="1rem" fontSize="24" as="h3">
+                Data de entrega:{" "}
+              </Heading>
+              <Heading paddingY="1rem" fontSize="24" as="h3">
+                Métodos de pagamento
+              </Heading>
+            </Box>
+            <Button margin="1rem" alignSelf="flex-end" colorScheme="brand.900">
               Comprar
             </Button>
           </Flex>
           <Box w="50vw">
-            <img src="" alt="" />
-            <Text>IMG PLACEHOLDER</Text>
+            <Image src={imgDetails} alt="" />
           </Box>
         </Flex>
-
-        {/* <Footer></Footer> */}
       </Flex>
     );
   }
