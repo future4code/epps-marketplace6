@@ -3,11 +3,12 @@ import axios from "axios";
 import {
   SimpleGrid,
   GridItem,
-  Center,
   Text,
   Flex,
   Heading,
-  // Box,
+  Input,
+  FormLabel,
+  Box,
   // Button,
   // Collapse,
   // useDisclosure,
@@ -16,10 +17,15 @@ import {
 class Products extends React.Component {
   state = {
     products: [],
+    filterInput: "",
   };
 
   componentDidMount = () => {
     this.getAllProducts();
+  };
+
+  onChangeStringFilter = (event) => {
+    this.setState({ filterInput: event.target.value });
   };
 
   // Get Products
@@ -38,36 +44,59 @@ class Products extends React.Component {
     // const { isOpen, onToggle } = useDisclosure();
 
     // Renderizar array de produtos
-    const listaDeProdutos = this.state.products.map((product) => {
-      return (
-        <GridItem
-          minH="300px"
-          p="1rem"
-          boxShadow="1px 3px 10px #202020"
-          borderRadius="5px"
-          key={product.id}
-        >
-          <Flex h="100%" direction="column" justify="space-around">
-            <Heading as="h4" textAlign="center" fontSize="20px">
-              {product.name}
-            </Heading>
-            <Text fontSize="16px">Descrição: {product.description}</Text>
-            <Text fontSize="16px">Valor: R$ {product.price}</Text>
-            <Text fontSize="16px">
-              Método de pagamento: {product.paymentMethod}
-            </Text>
-          </Flex>
-        </GridItem>
-      );
-    });
 
     // Filters
-    // const produtosFiltrados = listaDeProdutos.filter();
+    const filteredProducts = this.state.products
+      // Filtro de nome
+      .filter((product) => {
+        const lowerCaseName = product.name.toLowerCase();
+        const lowerCaseDescription = product.description.toLowerCase();
+        return (
+          lowerCaseName.includes(this.state.filterInput) ||
+          lowerCaseDescription.includes(this.state.filterInput)
+        );
+      });
 
     return (
-      <Center direction="column" h="80vh" w="100%" padding="2rem 2.5rem">
+      <Flex
+        as="article"
+        direction="column"
+        h="80vh"
+        w="100%"
+        padding="2rem 2.5rem"
+      >
+        <Flex paddingBottom="2rem" justify="space-between">
+          <Input
+            onChange={this.onChangeStringFilter}
+            value={this.state.filterInput}
+            placeholder="Filtrar nome/descrição"
+            maxW="250px"
+          />
+          <Input placeholder="Ordenar por:" maxW="250px" />
+        </Flex>
         <SimpleGrid h="100%" w="100%" minChildWidth="220px" spacing="3rem">
-          {listaDeProdutos}
+          {filteredProducts.map((product) => {
+            return (
+              <GridItem
+                minH="300px"
+                p="1rem"
+                boxShadow="1px 3px 10px #202020"
+                borderRadius="5px"
+                key={product.id}
+              >
+                <Flex h="100%" direction="column" justify="space-around">
+                  <Heading as="h4" textAlign="center" fontSize="20px">
+                    {product.name}
+                  </Heading>
+                  <Text fontSize="16px">Descrição: {product.description}</Text>
+                  <Text fontSize="16px">Valor: R$ {product.price}</Text>
+                  <Text fontSize="16px">
+                    Método de pagamento: {product.paymentMethod}
+                  </Text>
+                </Flex>
+              </GridItem>
+            );
+          })}
         </SimpleGrid>
         {/* <Button
         colorScheme="button"
@@ -79,7 +108,7 @@ class Products extends React.Component {
       <Collapse in={isOpen} animateOpacity>
         <DetailsPage />
       </Collapse> */}
-      </Center>
+      </Flex>
     );
   }
 }
