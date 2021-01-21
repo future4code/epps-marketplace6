@@ -5,6 +5,7 @@ import RegisterProductPage from "../pages/RegisterProductPage";
 import HomePage from "../pages/HomePage";
 import ProductsPage from "../pages/ProductsPage";
 import Header from "../components/header/NavBar";
+import Footer from "./Footer/Footer";
 
 export class AppContainer extends Component {
   state = {
@@ -43,7 +44,6 @@ export class AppContainer extends Component {
         align="center"
         justify="center"
         fontFamily="'Montserrat', sans-serif"
-        paddingX="2rem"
       >
         <Header>
           <Image />
@@ -63,7 +63,7 @@ export class AppContainer extends Component {
         {changePages()}
         {/* <DetailsPage /> */}
 
-        {/* <Footer></Footer> */}
+        <Footer />
       </Flex>
     );
   }
