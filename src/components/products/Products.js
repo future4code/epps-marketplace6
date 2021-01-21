@@ -18,14 +18,23 @@ class Products extends React.Component {
   state = {
     products: [],
     filterInput: "",
+    maxPriceInput: 0,
+    minPriceInput: 0,
   };
 
   componentDidMount = () => {
     this.getAllProducts();
   };
+  componentWillUnmount = () => {
+    this.getAllProducts();
+  };
 
   onChangeStringFilter = (event) => {
     this.setState({ filterInput: event.target.value });
+  };
+
+  onChangeMaxPrice = (event) => {
+    this.setState({ maxPriceInput: event.target.value });
   };
 
   // Get Products
@@ -55,7 +64,13 @@ class Products extends React.Component {
           lowerCaseName.includes(this.state.filterInput) ||
           lowerCaseDescription.includes(this.state.filterInput)
         );
+      })
+      // Filtro por valor máximo
+      .filter((product) => {
+        if (this.state.maxPriceInput === 0) return true;
+        if (product.price <= this.state.maxPriceInput) return true;
       });
+    // .sort(());
 
     return (
       <Flex
@@ -70,6 +85,12 @@ class Products extends React.Component {
             onChange={this.onChangeStringFilter}
             value={this.state.filterInput}
             placeholder="Filtrar nome/descrição"
+            maxW="250px"
+          />
+          <Input
+            onChange={this.onChangeMaxPrice}
+            value={this.state.maxPriceInput}
+            placeholder="Filtrar preço máximo"
             maxW="250px"
           />
           <Input placeholder="Ordenar por:" maxW="250px" />
