@@ -6,10 +6,7 @@ class RegisterProductPage extends Component {
   render() {
     return (
       <Flex>
-        {/* <Header></Header> */}
-        <Heading>Criar Ofertas</Heading>
         <RegisterProductForm />
-        {/* <Footer></Footer> */}
       </Flex>
     );
   }
