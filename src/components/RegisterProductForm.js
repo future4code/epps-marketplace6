@@ -11,9 +11,11 @@ import {
   Image,
 } from "@chakra-ui/react";
 
+
 class RegisterProductForm extends Component {
   render() {
     return (
+
       <Flex
         as="section"
         // direction="column"
@@ -59,9 +61,12 @@ class RegisterProductForm extends Component {
         >
           <Image src={imgRegister} alt="Opala-Diplomata-1990-da-Chevrolet" />
         </Box>
+
       </Flex>
     );
   }
 }
 
+
 export default RegisterProductForm;
+
