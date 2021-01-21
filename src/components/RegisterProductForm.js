@@ -11,11 +11,26 @@ import {
   Image,
 } from "@chakra-ui/react";
 
-
 class RegisterProductForm extends Component {
+  state = {
+    inputTitulo: "",
+    inputDescricao: "",
+    inputPreco: 0,
+    inputDataEntrega: 0,
+    inputMetodoPgto: "",
+  };
+
+  // Métodos onChange para colocar valores dos inputs no state
+  onChangeinputTitulo = () => {};
+  onChangeinputDescricao = () => {};
+  onChangeinputPreco = () => {};
+  onChangeinputDataEntrega = () => {};
+  onChangeinputMetodoPgto = () => {};
+
+  // Cadastrar Produto na API com axios
+
   render() {
     return (
-
       <Flex
         as="section"
         // direction="column"
@@ -36,13 +51,37 @@ class RegisterProductForm extends Component {
 
           <Box as="form" w="100%">
             <FormControl display="Flex" justifyContent="space-between" w="100%">
-              <Input placeholder="Marca" maxW="20vw" marginY="1rem" />
-              <Input placeholder="Modelo" maxW="20vw" marginY="1rem" />
+              <Input
+                id="marca"
+                placeholder="Marca"
+                maxW="20vw"
+                marginY="1rem"
+              />
+              <Input
+                id="modelo"
+                placeholder="Modelo"
+                maxW="20vw"
+                marginY="1rem"
+              />
             </FormControl>
 
-            <Input placeholder="Descrição" marginY="1rem" />
-            <Input placeholder="Data de entrega" marginY="1rem" />
-            <Input placeholder="Métodos de Pagamento" marginY="1rem" />
+            <Input
+              id="valor"
+              placeholder="Preço em R$"
+              type="number"
+              marginY="1rem"
+            />
+            <Input id="descricao" placeholder="Descrição" marginY="1rem" />
+            <Input
+              id="dataEntrega"
+              placeholder="Data de entrega"
+              marginY="1rem"
+            />
+            <Input
+              id="MetodoPgto"
+              placeholder="Métodos de Pagamento"
+              marginY="1rem"
+            />
           </Box>
 
           <Button colorScheme="button" alignSelf="flex-end">
@@ -61,12 +100,9 @@ class RegisterProductForm extends Component {
         >
           <Image src={imgRegister} alt="Opala-Diplomata-1990-da-Chevrolet" />
         </Box>
-
       </Flex>
     );
   }
 }
 
-
 export default RegisterProductForm;
-

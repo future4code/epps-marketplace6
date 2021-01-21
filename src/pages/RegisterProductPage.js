@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Flex, Heading } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import RegisterProductForm from "../components/RegisterProductForm";
 
 class RegisterProductPage extends Component {

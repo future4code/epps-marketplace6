@@ -1,4 +1,4 @@
-import { Flex, Heading, Text, Button } from "@chakra-ui/react";
+import { Flex, Heading, Text } from "@chakra-ui/react";
 import React from "react";
 
 // import CategoryCard from "./CategoryCard";

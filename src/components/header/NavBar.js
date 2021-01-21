@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Flex, Image, Button } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 // import DetailsPage from "../pages/DetailsPage";
 // import RegisterProductPage from "../pages/RegisterProductPage";
 // import HomePage from "../pages/HomePage";
