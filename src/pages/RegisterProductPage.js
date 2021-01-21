@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Flex, Heading } from "@chakra-ui/react";
-import RegisterProductForm from "./RegisterProductForm";
+import RegisterProductForm from "../components/RegisterProductForm";
 
 class RegisterProductPage extends Component {
   render() {
@@ -16,4 +16,3 @@ class RegisterProductPage extends Component {
 }
 
 export default RegisterProductPage;
-

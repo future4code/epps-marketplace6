@@ -17,9 +17,10 @@ const futureCarTheme = extendTheme({
         boxSizing: "border-box",
       },
       button: {
-        bgColor: "#EF6F6C",
+        bgColor: "magentaPalette.400",
+        margin: "0 1rem",
         _hover: {
-          bgColor: "#ED5C5A",
+          bgColor: "magentaPalette.600",
         },
       },
     },
@@ -27,11 +28,18 @@ const futureCarTheme = extendTheme({
 
   // Tema da paleta de cores
   colors: {
-    brand: {
-      100: "#F0FAF7",
+    bluePalette: {
       500: "#235B80",
       700: "#465775",
       900: "#272F3F",
+    },
+    magentaPalette: {
+      400: "#EF6F6C",
+      500: "#ED5C5A",
+      600: "#EB4A47",
+    },
+    greyPalette: {
+      100: "#F0FAF7",
     },
   },
 });
