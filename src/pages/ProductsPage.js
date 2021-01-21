@@ -12,8 +12,9 @@ const ProductsPage = () => {
       direction="column"
       justifyContent="space-between"
     >
-      <Heading>Produtos</Heading>
-
+      <Heading as="h2" padding="2rem">
+        Produtos
+      </Heading>
       <Products />
     </Flex>
   );

@@ -38,7 +38,6 @@ class RegisterProductForm extends Component {
         as="section"
         // direction="column"
         w="100vw"
-        h="80vh"
         justifyContent="space-between"
         alignItems="center"
       >
