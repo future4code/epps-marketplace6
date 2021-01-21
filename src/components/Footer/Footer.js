@@ -50,8 +50,8 @@ class Header2 extends React.Component {
             </Link>
           </Flex>
         </Flex>
-        <Flex w="100%" justifyContent="center">
-          <Text fontSize="12px">© FutureCar 2021</Text>
+        <Flex w="100%" position="absolute" bottom="0" justifyContent="center">
+          <Text fontSize="12px">FutureCar 2021 © All rights reserved.</Text>
         </Flex>
       </Flex>
     );

@@ -1,15 +1,12 @@
 import React, { Component } from "react";
-import { Flex, Heading } from "@chakra-ui/react";
-import RegisterProductForm from "../components/RegisterProductForm";
+import { Flex } from "@chakra-ui/react";
+import RegisterProductForm from "../components/register/RegisterProductForm";
 
 class RegisterProductPage extends Component {
   render() {
     return (
       <Flex>
-        {/* <Header></Header> */}
-        <Heading>Criar Ofertas</Heading>
         <RegisterProductForm />
-        {/* <Footer></Footer> */}
       </Flex>
     );
   }

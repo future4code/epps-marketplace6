@@ -10,17 +10,17 @@ const futureCarTheme = extendTheme({
     global: {
       // styles for the `body`
       body: {
-        bgGradient: "linear-gradient(-10deg, #272F3F, #235B80)",
+        bgGradient: "linear-gradient(-10deg, #272F3F, #465775)",
         color: "#F0FAF7",
         margin: 0,
         padding: 0,
         boxSizing: "border-box",
       },
       button: {
-        bgColor: "magentaPalette.400",
+        bgColor: "magentaPalette.600",
         margin: "0 1rem",
         _hover: {
-          bgColor: "magentaPalette.600",
+          bgColor: "magentaPalette.500",
         },
       },
     },

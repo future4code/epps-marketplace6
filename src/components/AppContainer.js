@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import { Flex, Image, Button, Box, Stack } from "@chakra-ui/react";
+import { Flex, Image, Button, Box } from "@chakra-ui/react";
 import { AddIcon } from "@chakra-ui/icons";
 import DetailsPage from "../pages/DetailsPage";
 import RegisterProductPage from "../pages/RegisterProductPage";
 import HomePage from "../pages/HomePage";
 import ProductsPage from "../pages/ProductsPage";
 import Header from "../components/header/NavBar";
-import Footer from "./Footer/Footer";
+import Footer from "../components/footer/Footer";
 import Logo from "../img/logo1.svg";
 
 export class AppContainer extends Component {
@@ -65,10 +65,8 @@ export class AppContainer extends Component {
             paddingX="1.5rem"
             variant="outline"
             _hover={{
-              color: "magentaPalette.600",
-              bgColor: "bluePalette.500",
-              borderColor: "magentaPalette.600",
-              boxShadow: "1px 3px 3px bluePalette.900",
+              bgColor: "bluePalette.900",
+              borderColor: "bluePalette.900",
             }}
             onClick={this.goToRegister}
           >
