@@ -14,7 +14,7 @@ class Header2 extends React.Component {
         as="footer"
         w="100%"
         h="10vh"
-        bgColor="brand.100"
+        bgColor="magentaPalette.600"
         align="center"
         justifyContent="center"
         direction="column"
