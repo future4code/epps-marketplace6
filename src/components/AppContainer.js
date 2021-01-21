@@ -7,7 +7,7 @@ import HomePage from "../pages/HomePage";
 import ProductsPage from "../pages/ProductsPage";
 import Header from "../components/header/NavBar";
 import Footer from "./Footer/Footer";
-import Logo from "./img/logo1.svg";
+import Logo from "../img/logo1.svg";
 
 export class AppContainer extends Component {
   state = {
