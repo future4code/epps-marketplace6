@@ -1,15 +1,9 @@
-import {
-  Flex,
-  Heading,
-  Button,
-  Collapse,
-  useDisclosure,
-} from "@chakra-ui/react";
+import { Flex, Heading } from "@chakra-ui/react";
 import React from "react";
-import DetailsPage from "./DetailsPage";
+
+import Products from "../components/products/Products";
 
 const ProductsPage = () => {
-  const { isOpen, onToggle } = useDisclosure();
   return (
     <Flex
       as="section"
@@ -20,16 +14,7 @@ const ProductsPage = () => {
     >
       <Heading>Produtos</Heading>
 
-      <Button
-        colorScheme="button"
-        alignSelf="flex-start"
-        onClick={() => onToggle()}
-      >
-        Detalhes
-      </Button>
-      <Collapse in={isOpen} animateOpacity>
-        <DetailsPage />
-      </Collapse>
+      <Products />
     </Flex>
   );
 };
