@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import imgRegister from "../img/imgRegister.jpg";
+import imgRegister from "../../img/imgRegister.jpg";
 
 import {
   Flex,
@@ -21,7 +21,10 @@ class RegisterProductForm extends Component {
   };
 
   // Métodos onChange para colocar valores dos inputs no state
-  onChangeinputTitulo = () => {};
+  onChangeinputTitulo = () => {
+    // this.state.titulo = inputMarca + inputModelo
+    this.setState({ inputTitulo: this.state.titulo });
+  };
   onChangeinputDescricao = () => {};
   onChangeinputPreco = () => {};
   onChangeinputDataEntrega = () => {};
@@ -56,6 +59,7 @@ class RegisterProductForm extends Component {
                 placeholder="Marca"
                 maxW="20vw"
                 marginY="1rem"
+                value={this.state.inputTitulo}
               />
               <Input
                 id="modelo"
