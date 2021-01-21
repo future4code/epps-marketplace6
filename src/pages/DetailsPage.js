@@ -32,7 +32,7 @@ const DetailsPage = () => {
   };
 
   return (
-    <Flex direction="column" w="100vw">
+    <Flex direction="column" w="100vw" h="80vh">
       {" "}
       {/* página */}
       <Flex w="100%" justifyContent="space-between" alignItems="center">

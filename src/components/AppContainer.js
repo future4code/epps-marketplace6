@@ -46,7 +46,7 @@ export class AppContainer extends Component {
         w="100vw"
         direction="column"
         align="center"
-        justify="center"
+        justify="space-between"
         fontFamily="'Montserrat', sans-serif"
       >
         <Header>
@@ -74,7 +74,7 @@ export class AppContainer extends Component {
           </Button>
         </Header>
 
-        {changePages()}
+        <Box h="80vh">{changePages()}</Box>
         {/* <DetailsPage /> */}
 
         <Footer />
