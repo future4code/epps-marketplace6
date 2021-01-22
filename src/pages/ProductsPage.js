@@ -5,13 +5,7 @@ import Products from "../components/products/Products";
 
 const ProductsPage = () => {
   return (
-    <Flex
-      as="section"
-      w="100vw"
-      height="80vh"
-      direction="column"
-      justifyContent="space-between"
-    >
+    <Flex as="section" direction="column" justifyContent="space-between">
       <Heading as="h2" padding="1rem">
         Produtos
       </Heading>

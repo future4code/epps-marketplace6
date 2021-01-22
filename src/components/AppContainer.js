@@ -74,10 +74,10 @@ export class AppContainer extends Component {
           </Button>
         </Header>
 
-        <Box h="80vh">{changePages()}</Box>
+        {changePages()}
         {/* <DetailsPage /> */}
 
-        {/*<Footer />*/}
+        <Footer />
       </Flex>
     );
   }

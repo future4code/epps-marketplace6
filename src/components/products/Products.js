@@ -73,13 +73,7 @@ class Products extends React.Component {
     // .sort(());
 
     return (
-      <Flex
-        as="article"
-        direction="column"
-        h="80vh"
-        w="100%"
-        padding="2rem 2.5rem"
-      >
+      <Flex as="article" direction="column" w="100%" padding="2rem 2.5rem">
         <Flex paddingBottom="2rem" justify="space-between">
           <Input
             onChange={this.onChangeStringFilter}
