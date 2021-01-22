@@ -9,6 +9,8 @@ import {
   Input,
   FormLabel,
   Box,
+  Select,
+  Option,
   // Button,
   // Collapse,
   // useDisclosure,
@@ -20,6 +22,7 @@ class Products extends React.Component {
     filterInput: "",
     maxPriceInput: 0,
     minPriceInput: 0,
+    inputPrice: "nenhum",
   };
 
   componentDidMount = () => {
@@ -35,6 +38,19 @@ class Products extends React.Component {
 
   onChangeMaxPrice = (event) => {
     this.setState({ maxPriceInput: event.target.value });
+  };
+
+  onChangePriceFilterNone = (event) => {
+    this.setState({ inputPrice: "nenhum" });
+  };
+
+  onChangePriceFilterAscending = (event) => {
+    this.setState({ inputPrice: "crescente" });
+    console.log(this.state.inputPrice);
+  };
+
+  onChangePriceFilterDescending = (event) => {
+    this.setState({ inputPrice: "decrescente" });
   };
 
   // Get Products
@@ -69,9 +85,20 @@ class Products extends React.Component {
       .filter((product) => {
         if (this.state.maxPriceInput === 0) return true;
         if (product.price <= this.state.maxPriceInput) return true;
-      });
-    // .sort(());
+      })
+      //Filtro por valor mínimo
 
+      // Ordenar produtos
+      .sort((lower, higher) => {
+        switch (this.state.inputPrice) {
+          case "crescente":
+            return lower.price - higher.price;
+          case "decrescente":
+            return higher.price - lower.price;
+          default:
+            return "nenhum";
+        }
+      });
     return (
       <Flex as="article" direction="column" w="100%" padding="2rem 2.5rem">
         <Flex paddingBottom="2rem" justify="space-between">
@@ -87,7 +114,26 @@ class Products extends React.Component {
             placeholder="Filtrar preço máximo"
             maxW="250px"
           />
-          <Input placeholder="Ordenar por:" maxW="250px" />
+          <Select>
+            <option
+              onClick={this.onChangePriceFilterNone}
+              value={this.state.inputPrice}
+            >
+              Ordenar por:
+            </option>
+            <option
+              onClick={this.onChangePriceFilterAscending}
+              value={this.state.inputPrice}
+            >
+              Crescente
+            </option>
+            <option
+              onClick={this.onChangePriceFilterDescending}
+              value={this.state.inputPrice}
+            >
+              Decrescente
+            </option>
+          </Select>
         </Flex>
         <SimpleGrid h="100%" w="100%" minChildWidth="220px" spacing="3rem">
           {filteredProducts.map((product) => {
@@ -127,5 +173,4 @@ class Products extends React.Component {
     );
   }
 }
-
 export default Products;
