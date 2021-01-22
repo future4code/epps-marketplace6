@@ -1,6 +1,7 @@
 import { Flex, Heading, Box, Text, Image, Button, Slider, Grid, SimpleGrid } from "@chakra-ui/react";
 import React from "react";
-import Bugatti from '../img/Bugatti.jpg'
+import Bugatti from '../img/Bugatti3.jpg'
+import MiniBugati from '../img/MiniBugatti.jpg'
 
 // import CategoryCard from "./CategoryCard";
 import Categories from "../components/home/Categories";
@@ -70,8 +71,7 @@ background="#ffffff"
         fontWeight="500"
         color="#ffffff"
         >
-          <p>Lorem Ipsum
-"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p> 
+          <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p> 
         </Text>
       </Box>
       <Box w="100%" h="60" bg="#f6f6f6">
@@ -84,15 +84,15 @@ background="#ffffff"
   {/* 5 RETANGULOS COM IMAGEns DAS CATEGORIAS OFERECIDAS */}
   <Box
   w="100%"
-  h="400px" 
+  h="380px" 
   background="#ffffff"
   > 
     <Heading 
     w="100%"
-    h="70px"
+    h="120px"
     color="#EB4A47"
     textAlign="center"
-    padding="1%"
+    padding="4%"
     
     >
       Categoria de veículos
@@ -104,42 +104,119 @@ background="#ffffff"
     fontWeight="600"
     fontSize="22px"
     >
-      <Box w="100%" h="200px" >
-      <Text >Utilitários</Text> 
+      <Box w="100%" h="170px" >
+      <Text >Esportivos</Text> 
       <Image boxSize="100%" objectFit="cover"
-      src={Bugatti} alt="Segun Adebayo" />    
+      src={MiniBugati} alt="Segun Adebayo" />    
       </Box>
 
-      <Box w="100%" h="200px" >
-      <Text >Utilitários</Text> 
+      <Box w="100%" h="170px" >
+      <Text >Populares</Text> 
       <Image boxSize="100%" objectFit="cover"
-      src={Bugatti} alt="Segun Adebayo" />    
+      src={MiniBugati} alt="Segun Adebayo" />    
       </Box>
 
-      <Box w="100%" h="200px" >
-      <Text >Utilitários</Text> 
+      <Box w="100%" h="170px" >
+      <Text >Pickup</Text> 
       <Image boxSize="100%" objectFit="cover"
-      src={Bugatti} alt="Segun Adebayo" />    
+      src={MiniBugati} alt="Segun Adebayo" />    
       </Box>
 
-      <Box w="100%" h="200px" >
-      <Text >Utilitários</Text> 
+      <Box w="100%" h="170px" >
+      <Text >Microvan</Text> 
       <Image boxSize="100%" objectFit="cover"
-      src={Bugatti} alt="Segun Adebayo" />    
+      src={MiniBugati} alt="Segun Adebayo" />    
       </Box>
 
-      <Box w="100%" h="200px" >
-      <Text >Utilitários</Text> 
+      <Box w="100%" h="170px" >
+      <Text >Super Luxo</Text> 
       <Image boxSize="100%" objectFit="cover"
-      src={Bugatti} alt="Segun Adebayo" />    
+      src={MiniBugati} alt="Segun Adebayo" />    
       </Box>
     </Grid>
   </Box>
 
-  
+    {/* 2 FILERAS COM TRÊS IMAGENS *** DESTAQUES DO MÊS *** */}
+  <Box
+    w="100%"
+    h="880px" 
+    background="#ffffff"
+  > 
+    <Heading 
+    w="100%"
+    h="90px"
+    color="#EB4A47"
+    textAlign="center"
+    padding="2%"
     
-   
-    
+    >
+      Destaques do mês
+    </Heading>
+    <Grid templateColumns="repeat(3, 1fr)" gap={6}
+    w="95%" h="400px" marginLeft="2%"  
+    color="#000000"  
+    textAlign="center"
+    fontWeight="500"
+    fontSize="16px"
+    >
+      <Box w="100%" h="250px" >
+      <Text >"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."</Text> 
+      <Image boxSize="100%" objectFit="cover"
+      src={MiniBugati} alt="Segun Adebayo" />    
+      </Box>
+
+      <Box w="100%" h="250px" >
+      <Text >"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."</Text> 
+      <Image boxSize="100%" objectFit="cover"
+      src={MiniBugati} alt="Segun Adebayo" />    
+      </Box>
+
+      <Box w="100%" h="250px" >
+      <Text >"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."</Text> 
+      <Image boxSize="100%" objectFit="cover"
+      src={MiniBugati} alt="Segun Adebayo" />    
+      </Box>
+
+      
+    </Grid>
+  </Box>
+  <Box
+    w="100%"
+    h="" 
+    background="#ffffff"
+  > 
+
+    {/* ESPAÇO EM BRANCO - SEPARADOR   */}
+    <Heading w="100%" h="20px" />
+        
+    <Grid templateColumns="repeat(2, 1fr)" gap={6}
+    w="95%" h="300px" marginLeft="2%"  
+    color="#000000"  
+    textAlign="center"
+    fontWeight="500"
+    fontSize="16px"
+    >
+      <Box w="100%" h="280px" >
+      <Text >"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."</Text> 
+      <Image boxSize="100%" objectFit="cover"
+      src={MiniBugati} alt="Segun Adebayo" />    
+      </Box>
+
+      <Box w="100%" h="280px" >
+      <Text >"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."</Text> 
+      <Image boxSize="100%" objectFit="cover"
+      src={MiniBugati} alt="Segun Adebayo" />    
+      </Box>
+
+    {/*<Box w="100%" h="200px" >
+      <Text >"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."</Text> 
+      <Image boxSize="100%" objectFit="cover"
+      src={MiniBugati} alt="Segun Adebayo" />    
+    </Box>*/}
+    </Grid>
+  </Box>
+
+  <Heading w="100%" h="20px" />
    
 </Flex>
       /*<Flex as="section" w="100vw" h="100%" paddingY="2rem" direction="column">
