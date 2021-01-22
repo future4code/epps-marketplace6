@@ -42,7 +42,7 @@ export class AppContainer extends Component {
     return (
       <Flex
         as="main"
-        h="100vh"
+        h="100%"
         w="100vw"
         direction="column"
         align="center"
