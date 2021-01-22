@@ -5,11 +5,11 @@ const NavBar = ({ children }) => {
   return (
     <Flex
       as="header"
-      h="10vh"
+      h="100px"
       w="100%"
       justifyContent="space-between"
       alignItems="center"
-      paddingX="2rem"
+      padding="1rem"
     >
       {children}
     </Flex>

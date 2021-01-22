@@ -15,6 +15,7 @@ const futureCarTheme = extendTheme({
         margin: 0,
         padding: 0,
         boxSizing: "border-box",
+        overflowX: "hidden",
       },
       button: {
         bgColor: "magentaPalette.600",
@@ -29,6 +30,7 @@ const futureCarTheme = extendTheme({
   // Tema da paleta de cores
   colors: {
     bluePalette: {
+      300: "#8091B3",
       500: "#235B80",
       700: "#465775",
       900: "#272F3F",
