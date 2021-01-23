@@ -22,7 +22,7 @@ import Luxo from "../img/luxo.jpg"
 class HomePage extends React.Component {
   render() {
     return (
-      <Flex direction="column" background="#ffffff" paddingBottom="3rem" >
+      <Flex direction="column" background="#ffffff" paddingBottom="4rem" >
         {/* IMAGEM GRANDE DE CARRO COM BOTÃO E FRASE DE CHAMADA */}
         <Flex
           minW="100%"
@@ -118,7 +118,7 @@ class HomePage extends React.Component {
 
         {/* 5 RETANGULOS COM IMAGENS DAS CATEGORIAS OFERECIDAS */}
         
-        <Box w="100%" h="400px" background="#ffffff">
+        <Box w="100%" h="350px" background="#ffffff">
           <Heading
             w="100%"
             h="120px"
@@ -192,7 +192,7 @@ class HomePage extends React.Component {
         </Box>
 
         {/* 2 FILERAS COM TRÊS IMAGENS *** DESTAQUES DO MÊS *** */}
-        <Box w="100%" h="480px" background="#ffffff">
+        <Box w="100%" h="450px" background="#ffffff">
           <Heading
             w="100%"
             h="90px"
