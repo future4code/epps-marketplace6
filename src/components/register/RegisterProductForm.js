@@ -91,7 +91,7 @@ class RegisterProductForm extends Component {
           direction="column"
           justifyContent="space-between"
           w="40vw"
-          h="80%"
+          h="auto"
           padding="4rem 2rem"
         >
           <Heading>Formulário</Heading>
@@ -123,6 +123,7 @@ class RegisterProductForm extends Component {
               value={this.state.inputPreco}
               onChange={this.onChangeinputPreco}
             />
+
             <Input
               id="descricao"
               placeholder="Descrição"
@@ -130,6 +131,7 @@ class RegisterProductForm extends Component {
               value={this.state.inputDescricao}
               onChange={this.onChangeinputDescricao}
             />
+
             <Input
               id="dataEntrega"
               placeholder="Data de entrega"

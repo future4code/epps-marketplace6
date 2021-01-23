@@ -7,10 +7,8 @@ import {
   Flex,
   Heading,
   Input,
-  FormLabel,
-  Box,
   Select,
-  Option,
+  CloseButton,
   // Button,
   // Collapse,
   // useDisclosure,
@@ -65,6 +63,16 @@ class Products extends React.Component {
     }
   };
 
+  // Delete Product
+  deleteCar = async () => {
+    try {
+      const response = await axios.get();
+      this.setState({ products: response.data.cars });
+    } catch (err) {
+      console.log("Erro: ", err);
+    }
+  };
+
   render() {
     // const { isOpen, onToggle } = useDisclosure();
 
@@ -102,9 +110,10 @@ class Products extends React.Component {
             return "nenhum";
         }
       });
+
     return (
-      <Flex as="article" direction="column" w="100%" padding="2rem 2.5rem">
-        <Flex paddingBottom="2rem" justify="space-between">
+      <Flex as="article" direction="column" w="100%" padding="2.5rem">
+        <Flex paddingBottom="3rem" justify="space-between">
           <Input
             onChange={this.onChangeStringFilter}
             value={this.state.filterInput}
@@ -146,6 +155,7 @@ class Products extends React.Component {
             </option>
           </Select>
         </Flex>
+
         <SimpleGrid h="100%" w="100%" minChildWidth="220px" spacing="3rem">
           {filteredProducts.map((product) => {
             return (
@@ -157,6 +167,7 @@ class Products extends React.Component {
                 key={product.id}
               >
                 <Flex h="100%" direction="column" justify="space-around">
+                  <CloseButton onClick={() => this.deleteCar()} />
                   <Heading as="h4" textAlign="center" fontSize="20px">
                     {product.name}
                   </Heading>
