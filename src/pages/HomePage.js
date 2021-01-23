@@ -60,7 +60,7 @@ class HomePage extends React.Component {
           
         </Flex>
 
-           {/* 1 RETANGULO - VINHETA   */}
+        {/* 1 RETANGULO - VINHETA   */}
 
         <Flex w="100%" h="250px">
           <Text
@@ -78,6 +78,7 @@ class HomePage extends React.Component {
           </Text>
         </Flex>
 
+        {/* 1 RETANGULO - com 2 div - div-1 com dizeres  div-2 com imagem */}
 
           {/* 1 RETANGULO - com 2 div - div-1 com dizeres  div-2 com imagem */}
 

@@ -12,19 +12,25 @@ const Footer = () => {
     <Flex
       as="footer"
       w="100%"
+      h="100%"
       minH="150px"
       align="center"
       justifyContent="space-between"
       direction="column"
       color="brand.900"
     >
-      <Flex w="100%" marginY="auto" justify="center" align="center">
-        <Flex justify="flex-end" w="50%" paddingLeft="1rem" fontSize="14px">
+      <Flex w="100%" h="100%" paddingY="2.5rem" justify="center" align="center">
+        <Flex
+          justifyContent="flex-end"
+          w="50%"
+          paddingLeft="1rem"
+          fontSize="14px"
+        >
           <Link paddingX="0.5rem">Condições de uso</Link>
           <Link paddingX="0.5rem">Fale conosco</Link>
         </Flex>
         <Flex
-          justify="flex-start"
+          justifyContent="flex-start"
           w="50%"
           paddingRight="3rem"
           fontSize="2.2rem"

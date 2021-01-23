@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import {
   SimpleGrid,
@@ -9,6 +9,8 @@ import {
   Input,
   FormLabel,
   Box,
+  Select,
+  Option,
   // Button,
   // Collapse,
   // useDisclosure,
@@ -18,14 +20,12 @@ class Products extends React.Component {
   state = {
     products: [],
     filterInput: "",
-    maxPriceInput: 0,
-    minPriceInput: 0,
+    maxPriceInput: "",
+    minPriceInput: "",
+    inputPrice: "",
   };
 
   componentDidMount = () => {
-    this.getAllProducts();
-  };
-  componentWillUnmount = () => {
     this.getAllProducts();
   };
 
@@ -35,6 +35,22 @@ class Products extends React.Component {
 
   onChangeMaxPrice = (event) => {
     this.setState({ maxPriceInput: event.target.value });
+  };
+
+  onChangeMinPrice = (event) => {
+    this.setState({ minPriceInput: event.target.value });
+  };
+
+  onChangePriceFilterNone = () => {
+    this.setState({ inputPrice: "nenhum" });
+  };
+
+  onChangePriceFilterAscending = () => {
+    this.setState({ inputPrice: "crescente" });
+  };
+
+  onChangePriceFilterDescending = () => {
+    this.setState({ inputPrice: "decrescente" });
   };
 
   // Get Products
@@ -67,11 +83,25 @@ class Products extends React.Component {
       })
       // Filtro por valor máximo
       .filter((product) => {
-        if (this.state.maxPriceInput === 0) return true;
+        if (this.state.maxPriceInput === "") return true;
         if (product.price <= this.state.maxPriceInput) return true;
+      })
+      //Filtro por valor mínimo
+      .filter((product) => {
+        if (this.state.minPriceInput === "") return true;
+        if (product.price >= this.state.minPriceInput) return true;
+      })
+      // Ordenar produtos
+      .sort((lower, higher) => {
+        switch (this.state.inputPrice) {
+          case "crescente":
+            return lower.price - higher.price;
+          case "decrescente":
+            return higher.price - lower.price;
+          default:
+            return "nenhum";
+        }
       });
-    // .sort(());
-
     return (
       <Flex as="article" direction="column" w="100%" padding="2rem 2.5rem">
         <Flex paddingBottom="2rem" justify="space-between">
@@ -79,15 +109,42 @@ class Products extends React.Component {
             onChange={this.onChangeStringFilter}
             value={this.state.filterInput}
             placeholder="Filtrar nome/descrição"
-            maxW="250px"
+            maxW="230px"
+          />
+          <Input
+            onChange={this.onChangeMinPrice}
+            value={this.state.minPriceInput}
+            type="number"
+            placeholder="Filtrar preço mínimo"
+            maxW="230px"
           />
           <Input
             onChange={this.onChangeMaxPrice}
             value={this.state.maxPriceInput}
+            type="number"
             placeholder="Filtrar preço máximo"
-            maxW="250px"
+            maxW="230px"
           />
-          <Input placeholder="Ordenar por:" maxW="250px" />
+          <Select color="bluePalette.900">
+            <option
+              onClick={this.onChangePriceFilterNone}
+              value={this.state.inputPrice}
+            >
+              Ordenar por:
+            </option>
+            <option
+              onClick={this.onChangePriceFilterAscending}
+              value={this.state.inputPrice}
+            >
+              Crescente
+            </option>
+            <option
+              onClick={this.onChangePriceFilterDescending}
+              value={this.state.inputPrice}
+            >
+              Decrescente
+            </option>
+          </Select>
         </Flex>
         <SimpleGrid h="100%" w="100%" minChildWidth="220px" spacing="3rem">
           {filteredProducts.map((product) => {
@@ -127,5 +184,52 @@ class Products extends React.Component {
     );
   }
 }
-
 export default Products;
+
+// const Products = () => {
+//   const [products, setProducts] = useState([]);
+
+//   useEffect(() => {
+//     const getAllProducts = async () => {
+//       try {
+//         const response = await axios.get(
+//           "https://us-central1-labenu-apis.cloudfunctions.net/futureCarTwo/cars"
+//         );
+//         setProducts(response.data.cars);
+//       } catch (err) {
+//         console.log("Erro: ", err);
+//       }
+//     };
+//     getAllProducts();
+//     return () => {};
+//   }, []);
+
+//   return (
+//     <SimpleGrid h="100%" w="100%" minChildWidth="220px" spacing="3rem">
+//       {products.map((product) => {
+//         return (
+//           <GridItem
+//             minH="300px"
+//             p="1rem"
+//             boxShadow="1px 3px 10px #202020"
+//             borderRadius="5px"
+//             key={product.id}
+//           >
+//             <Flex h="100%" direction="column" justify="space-around">
+//               <Heading as="h4" textAlign="center" fontSize="20px">
+//                 {product.name}
+//               </Heading>
+//               <Text fontSize="16px">Descrição: {product.description}</Text>
+//               <Text fontSize="16px">Valor: R$ {product.price}</Text>
+//               <Text fontSize="16px">
+//                 Método de pagamento: {product.paymentMethod}
+//               </Text>
+//             </Flex>
+//           </GridItem>
+//         );
+//       })}
+//     </SimpleGrid>
+//   );
+// };
+
+// export default Products;

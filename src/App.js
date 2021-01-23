@@ -24,6 +24,9 @@ const futureCarTheme = extendTheme({
           bgColor: "magentaPalette.500",
         },
       },
+      option: {
+        color: "#bluePalette.900",
+      },
     },
   },
 
