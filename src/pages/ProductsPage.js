@@ -5,7 +5,12 @@ import Products from "../components/products/Products";
 
 const ProductsPage = () => {
   return (
-    <Flex as="section" direction="column" justifyContent="space-between">
+    <Flex
+      as="section"
+      minW="80%"
+      direction="column"
+      justifyContent="space-between"
+    >
       <Heading as="h2" padding="1rem">
         Produtos
       </Heading>

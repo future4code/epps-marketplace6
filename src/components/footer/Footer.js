@@ -19,7 +19,7 @@ const Footer = () => {
       direction="column"
       color="brand.900"
     >
-      <Flex w="100%" h="100%" justify="center" align="center">
+      <Flex w="100%" h="100%" paddingY="2.5rem" justify="center" align="center">
         <Flex
           justifyContent="flex-end"
           w="50%"
