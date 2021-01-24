@@ -6,7 +6,7 @@ import RegisterProductPage from "../pages/RegisterProductPage";
 import HomePage from "../pages/HomePage";
 import ProductsPage from "../pages/ProductsPage";
 import Header from "../components/header/NavBar";
-import Footer from "../components/footer/Footer";
+//import Footer from "../components/footer/Footer";
 import Logo from "../img/logo1.svg";
 
 export class AppContainer extends Component {
@@ -77,7 +77,7 @@ export class AppContainer extends Component {
         {changePages()}
         {/* <DetailsPage /> */}
 
-        <Footer />
+        {/* <Footer /> */}
       </Flex>
     );
   }
