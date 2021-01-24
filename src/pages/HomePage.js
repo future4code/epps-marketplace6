@@ -49,7 +49,7 @@ class HomePage extends React.Component {
                 <Heading fontSize="30px" as="h3" textShadow="1px 1px 3px #000000" textAlign="right">
                   GOING BEYOND
                 </Heading>
-                <Button alignSelf="flex-end" size="sm" marginTop="2rem" colorScheme="button" onClick={() => this.setState({ page: "products" })}>
+                <Button alignSelf="flex-end" size="sm" marginTop="2rem" colorScheme="button" onClick={() => this.changeProductsPage({ value: "ProductsPage" })}>
                   Saiba mais
                 </Button>
               </Flex>
